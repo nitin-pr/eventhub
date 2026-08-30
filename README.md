@@ -79,11 +79,17 @@ Cancelling a reservation that is already `cancelled` returns `400`.
 
 ## Screenshots
 
-| Screenshot | Scenario |
-|---|---|
-| [screenshots/01-successful-reservation.png](screenshots/01-successful-reservation.png) | `POST /api/reservations/` → `201 Created` |
-| [screenshots/02-overbooking-failure.png](screenshots/02-overbooking-failure.png) | `POST /api/reservations/` with excess seats → `400 Bad Request` |
-| [screenshots/03-successful-cancellation.png](screenshots/03-successful-cancellation.png) | `POST /api/reservations/{id}/cancel/` → `200 OK` |
+**Successful reservation** — `POST /api/reservations/` → `201 Created`
+
+![Successful reservation](screenshots/01-successful-reservation.png)
+
+**Overbooking failure** — `POST /api/reservations/` with excess seats → `400 Bad Request`
+
+![Overbooking failure](screenshots/02-overbooking-failure.png)
+
+**Successful cancellation** — `POST /api/reservations/{id}/cancel/` → `200 OK`
+
+![Successful cancellation](screenshots/03-successful-cancellation.png)
 
 ## Design Decision
 
